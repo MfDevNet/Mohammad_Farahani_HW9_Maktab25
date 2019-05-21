@@ -2,11 +2,15 @@ package ir.maktab.model.dao;
 
 
 import javax.persistence.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 @Table(name = "teachers")
 public class Teacher {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +20,7 @@ public class Teacher {
     private String firstName;
 
     @Column(name = "last_name")
-    private String last_name;
+    private String lastName;
 
     @Column(name = "teacher_code", nullable = false, unique = true)
     private String teacherCode;
@@ -27,12 +31,13 @@ public class Teacher {
     @Column(name = "birth_day")
     private LocalDate birthDay;
     // constructor
-    public Teacher(String firstName, String last_name, String teacherCode, double salary, LocalDate birthDay) {
+    public Teacher(String firstName, String lastName, String teacherCode, double salary, String birthDay) {
         this.firstName = firstName;
-        this.last_name = last_name;
+        this.lastName = lastName;
         this.teacherCode = teacherCode;
         this.salary = salary;
-        this.birthDay = birthDay;
+//        this.birthDay= LocalDate.parse(new SimpleDateFormat("yyyy-MM-dd").format(birthDay));
+        this.birthDay = LocalDate.parse(birthDay);
     }
 
     public Teacher() {
@@ -57,12 +62,12 @@ public class Teacher {
         this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getTeacherCode() {
@@ -95,7 +100,7 @@ public class Teacher {
         return "Teacher{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
-                ", last_name='" + last_name + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", teacherCode='" + teacherCode + '\'' +
                 ", salary=" + salary +
                 ", birthDay=" + birthDay +
