@@ -6,7 +6,7 @@ public interface StudentDAO {
 
     public void insert(Student student);
     public void delete(String StudentId);
-    public void update(Student student);
+    public void update(String id,Student student);
     public Student find(String... args);
     public List<Student> findAll(String... args);
 

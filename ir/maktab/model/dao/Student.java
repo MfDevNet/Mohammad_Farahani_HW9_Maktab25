@@ -15,14 +15,14 @@ public class Student {
     private String firstName;
 
     @Column(name = "last_name")
-    private String last_name;
+    private String lastName;
 
     // constructor
 
 
-    public Student(String firstName, String last_name) {
+    public Student(String firstName, String lastName) {
         this.firstName = firstName;
-        this.last_name = last_name;
+        this.lastName = lastName;
     }
 
     public Student() {
@@ -47,12 +47,12 @@ public class Student {
         this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
 
@@ -64,7 +64,7 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
-                ", last_name='" + last_name + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }
