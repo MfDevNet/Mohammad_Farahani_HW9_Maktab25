@@ -4,27 +4,27 @@ import java.util.List;
 
 public class StudentDaoImpl implements StudentDAO {
     @Override
-    public void insert(Teacher teacher) {
+    public void insert(Student student) {
 
     }
 
     @Override
-    public void delete(String teacheCode) {
+    public void delete(String StudentId) {
 
     }
 
     @Override
-    public void update(Teacher teacher) {
+    public void update(Student student) {
 
     }
 
     @Override
-    public Teacher find(String... args) {
+    public Student find(String... args) {
         return null;
     }
 
     @Override
-    public List<Teacher> findAll(String... args) {
+    public List<Student> findAll(String... args) {
         return null;
     }
 }
