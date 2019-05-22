@@ -36,7 +36,6 @@ public class Teacher {
         this.lastName = lastName;
         this.teacherCode = teacherCode;
         this.salary = salary;
-//        this.birthDay= LocalDate.parse(new SimpleDateFormat("yyyy-MM-dd").format(birthDay));
         this.birthDay = LocalDate.parse(birthDay);
     }
 
