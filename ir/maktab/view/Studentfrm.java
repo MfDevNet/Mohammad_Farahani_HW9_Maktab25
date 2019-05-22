@@ -272,7 +272,10 @@ public class Studentfrm extends javax.swing.JFrame {
 
     private void finderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finderMouseClicked
         if (finder.isSelected())
-            JOptionPane.showConfirmDialog(null, "For Search Use TextBox ");        // TODO add your handling code here:
+            JOptionPane.showMessageDialog(null, "For Search Use TextBox ");        // TODO add your handling code here:
+        if (!finder.isSelected()){
+            listFill(st.findAll("",""));
+        }
     }//GEN-LAST:event_finderMouseClicked
 
     Student getStudent(){
