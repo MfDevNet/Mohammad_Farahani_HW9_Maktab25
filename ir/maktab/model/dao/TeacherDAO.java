@@ -8,5 +8,10 @@ public interface TeacherDAO {
     public void update(String teacherCode,Teacher teacher);
     public Teacher find(String... args);
     public List<Teacher> findAll(String... args);
+    public List<Teacher> listTh(Teacher teacher);
+    public List<Teacher> maxminsalary();
+    public List<Teacher> youngoldbirthday();
+
+
 
 }
